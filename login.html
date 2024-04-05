@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <div class="container">
+    <h1>Fuel Delivery App</h1>
+    <form id="deliveryForm">
+  <title>Fuel Delivery App - Login and Sign Up</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="container">
+    <div id="loginForm">
+      <h2>Login</h2>
+      <form id="login">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Login</button>
+      </form>
+      <p>Don't have an account? <a href="#" id="switchToSignUp">Sign Up</a></p>
+    </div>
+    <div id="signupForm" style="display: none;">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Sign In</h1>
+    <form id="signInForm">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      <button> <a href="order.html">Sign In</a></button>
+    </form>
+    <p id="errorMessage" class="error-message" style="display: none;"></p>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>
+

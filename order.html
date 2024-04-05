@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fuel Ordering Page</title>
+  <link rel="stylesheet" href="order.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Fuel Ordering</h1>
+    <form id="orderForm">
+      <label for="fuelType">Select Fuel Type:</label>
+      <select id="fuelType" name="fuelType">
+        <option value="gasoline">Gasoline</option>
+        <option value="diesel">Diesel</option>
+        <option value="naturalGas">Natural Gas</option>
+      </select>
+      <label for="quantity">Quantity (Litres):</label>
+      <input type="number" id="quantity" name="quantity" min="1" required>
+      <button type="submit">Place Order</button>
+    </form>
+    <p id="orderStatus"></p>
+  </div>
+
+  <script src="order.js"></script>
+</body>
+</html>

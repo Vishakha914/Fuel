@@ -1,0 +1,220 @@
+
+             login and sign in page 
+             HTML
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <div class="container">
+    <h1>Fuel Delivery App</h1>
+    <form id="deliveryForm">
+  <title>Fuel Delivery App - Login and Sign Up</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div id="loginForm">
+      <h2>Login</h2>
+      <form id="login">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Login</button>
+      </form>
+      <p>Don't have an account? <a href="#" id="switchToSignUp">Sign Up</a></p>
+    </div>
+    <div id="signupForm" style="display: none;">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Sign In</h1>
+    <form id="signInForm">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      <button type="submit">Sign In</button>
+    </form>
+    <p id="errorMessage" class="error-message" style="display: none;"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+        CSS
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin-top: 0;
+  color: #333333;
+}
+
+label {
+  margin-top: 10px;
+  display: block;
+}
+
+input[type="text"],
+input[type="password"],
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.error-message {
+  color: #ff0000;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin-top: 0;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input[type="text"],
+input[type="password"],
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+}
+
+
+
+
+     JAVASCRPT
+
+    document.addEventListener("DOMContentLoaded", function() {
+  var loginForm = document.getElementById("loginForm");
+  var signupForm = document.getElementById("signupForm");
+  var errorMessage = document.getElementById("errorMessage");
+
+  document.getElementById("switchToSignUp").addEventListener("click", function(event) {
+    event.preventDefault();
+    loginForm.style.display = "none";
+    signupForm.style.display = "block";
+    errorMessage.style.display = "none";
+  });
+
+  document.getElementById("switchToLogin").addEventListener("click", function(event) {
+    event.preventDefault();
+    loginForm.style.display = "block";
+    signupForm.style.display = "none";
+    errorMessage.style.display = "none";
+  });
+
+  document.getElementById("login").addEventListener("submit", function(event) {
+    event.preventDefault();
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    // Perform login logic here
+    // For demonstration purposes, I'll just display an error message
+    errorMessage.textContent = "Invalid username or password.";
+    errorMessage.style.display = "block";
+  });
+
+  document.getElementById("signup").addEventListener("submit", function(event) {
+    event.preventDefault();
+    var newUsername = document.getElementById("newUsername").value;
+    var newPassword = document.getElementById("newPassword").value;
+    // Perform sign up logic here
+    // For demonstration purposes, I'll just display an error message
+    errorMessage.textContent = "Failed to sign up.";
+    errorMessage.style.display = "block";
+  });
+});
+
+
+
+
+document.getElementById("signInForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+  
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+
+  // Simulated authentication logic (replace with actual authentication logic)
+  if (username === "user" && password === "password") {
+    // Redirect to dashboard or perform other actions upon successful sign-in
+    alert("Sign in successful!");
+  } 
+});
